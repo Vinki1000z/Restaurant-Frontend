@@ -8,13 +8,12 @@
 
     --main-color:#e23744;
 
-    --font-caption: 11px "Arial", sans-serif;
-    --font-icon: 19px;
+    --font-caption:400 13px "Source Sans Pro", sans-serif;
 
     --font-title: 600 62px/1 "Source Sans Pro", sans-serif;
     --font-title-color:#0e2368;
-    --font-primary:400 16px "Open Sans", sans-serif;
-    --font-secondary: 400 21px "Open Sans", sans-serif;
+    --font-primary:400 18px "Open Sans", sans-serif;
+    --font-secondary: 400 23px "Open Sans", sans-serif;
     --font-primary-color:rgba(68, 73, 87, 1);
     
   }

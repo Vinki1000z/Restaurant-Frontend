@@ -42,42 +42,73 @@ const Articles = () => {
     };
   }, []);
 
+  // Reset currentSlide when articlesPerSlide changes
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, [articlesPerSlide]);
+
   const handleNext = () => {
     if (currentSlide < Math.ceil(articles.length / articlesPerSlide) - 1) {
-      setCurrentSlide((prev) => prev + 1);
+      setCurrentSlide(prev => prev + 1);
     }
   };
 
   const handlePrev = () => {
     if (currentSlide > 0) {
-      setCurrentSlide((prev) => prev - 1);
+      setCurrentSlide(prev => prev - 1);
     }
   };
 
   return (
     <section className={styles.container}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>Latest Articles</h2>
-        <div className={styles.articleGrid} style={{ transform: `translateX(-${(currentSlide * 100) / articlesPerSlide}%)` }}>
-          <div className={styles.articleList}>
-            {articles.slice(currentSlide * articlesPerSlide, currentSlide * articlesPerSlide + articlesPerSlide).map((article, index) => (
-              <ArticleCard key={index} {...article} />
+        <h2 className={styles.title} data-aos="fade-up"
+          data-aos-delay="50">Latest Articles</h2>
+        <div className={styles.articleGrid}>
+          <div   data-aos="fade-up"
+          data-aos-delay="50"
+            className={styles.articleList}
+            style={{ 
+              transform: `translateX(-${currentSlide * (100 / Math.ceil(articles.length / articlesPerSlide))}%)`,
+              width: `${100 * Math.ceil(articles.length / articlesPerSlide)}%`
+            }}
+          >
+            {articles.map((article, index) => (
+              <ArticleCard
+                key={index} 
+                {...article}
+                style={{
+                  width: `${100 / articles.length}%`
+                }}
+              />
             ))}
           </div>
         </div>
-        <nav className={styles.pagination} aria-label="Pagination">
-          <button className={styles.paginationButton} onClick={handlePrev} aria-label="Previous page" disabled={currentSlide === 0}>
+        <nav className={styles.pagination} aria-label="Pagination"   data-aos="fade-up"
+          data-aos-delay="50">
+          <button 
+            className={styles.paginationButton} 
+            onClick={handlePrev} 
+            aria-label="Previous page" 
+            disabled={currentSlide === 0}
+          >
             <img loading="lazy" src={Prev} alt="Previous" />
           </button>
-          <span aria-current="page">{currentSlide + 1}/{Math.ceil(articles.length / articlesPerSlide)}</span>
-          <button className={styles.paginationButton} onClick={handleNext} aria-label="Next page" disabled={currentSlide === Math.ceil(articles.length / articlesPerSlide) - 1}>
+          <span aria-current="page">
+            {currentSlide + 1}/{Math.ceil(articles.length / articlesPerSlide)}
+          </span>
+          <button 
+            className={styles.paginationButton} 
+            onClick={handleNext} 
+            aria-label="Next page" 
+            disabled={currentSlide === Math.ceil(articles.length / articlesPerSlide) - 1}
+          >
             <img loading="lazy" src={Next} alt="Next" />
           </button>
         </nav>
       </div>
     </section>
   );
-  
 };
 
 export default Articles;

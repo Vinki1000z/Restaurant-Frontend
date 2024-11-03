@@ -10,12 +10,15 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <img
+          data-aos="fade-up"
+          data-aos-delay="50"
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a9a6252f3ba042ae722aa78194f97d6b23a1cb62332b3b3332a4181452928cd?placeholderIfAbsent=true&apiKey=621a9be51e55481592185121250bd32e"
           className={styles.logo}
           alt="Company Logo"
         />
-        <div className={styles.contactInfo}>
+        <div className={styles.contactInfo}   data-aos="fade-up"
+          data-aos-delay="50">
           <h2 className={styles.sectionTitle}>Contact Us</h2>
           <address className={styles.address}>
             Lorem Ipsum Pvt Ltd.5/1, Magalton
@@ -28,7 +31,8 @@ const Footer = () => {
             (904) 443-0343
           </a>
         </div>
-        <nav className={styles.links}>
+        <nav className={styles.links}   data-aos="fade-up"
+          data-aos-delay="50">
           <h2 className={styles.sectionTitle}>More</h2>
           {links.map((link, index) => (
             <a key={index} href="/" className={styles.link}>
@@ -36,7 +40,8 @@ const Footer = () => {
             </a>
           ))}
         </nav>
-        <div className={styles.socialLinks}>
+        <div className={styles.socialLinks}   data-aos="fade-up"
+          data-aos-delay="50">
           <h2 className={styles.sectionTitle}>Social Links</h2>
           {/* Add social media icons/links here */}
           <div
