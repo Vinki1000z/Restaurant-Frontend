@@ -1,0 +1,127 @@
+.aboutUsContainer {
+    background: #f6f7fa;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 100px;
+    height: 464px;
+}
+
+.contentWrapper {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.imageColumn {
+    flex: 1 1;
+    display: flex; /* Display as flex by default */
+    flex-direction: column;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.aboutImage {
+    aspect-ratio: 0.82;
+    object-position: center;
+    width: 60%;
+    border-radius: 0;
+    flex-grow: 1;
+    align-self: center;
+}
+
+.textColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContent {
+    width: 74%;
+}
+
+.aboutUsTitle {
+    color: var(--font-title-color);
+    font: var(--font-title);
+    margin-bottom: 27px;
+}
+
+.aboutUsDescription {
+    color: var(--font-primary-color);
+    font: var(--font-primary);
+    margin-bottom: 21px;
+    line-height: 1.6;
+}
+
+.readMoreButton {
+    border-radius: 34px;
+    background-color: var(--main-color);
+    align-self: start;
+    margin-top: 41px;
+    min-height: 63px;
+    gap: 7px;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 0.18px;
+    line-height: 36px;
+    padding: 14px 34px;
+    border: none;
+    cursor: pointer;
+    font: var(--font-primary);
+}
+
+.readMoreButton:hover {
+    background-color: var(--main-color);
+}
+
+@media (max-width: 991px) {
+    .imageColumn {
+        display: none; /* Hide imageColumn at 991px or smaller */
+    }
+
+    .contentWrapper {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    .aboutImage {
+        margin-top: 40px;
+    }
+
+    .textColumn {
+        align-items: center;
+    }
+
+    .textContent {
+        text-align: center;
+    }
+
+    .aboutUsTitle {
+        font-size: 40px;
+    }
+
+    .readMoreButton {
+        padding: 0 20px;
+    }
+    .textContent{
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+   .aboutUsContainer {
+    height: 500px;
+   }
+}
+@media (max-width: 550px) {
+   .aboutUsContainer {
+    height: 450px;
+   }
+}
+@media (min-width: 992px) {
+    .imageColumn {
+        display: flex; /* Show imageColumn as flex at 992px and above */
+    }
+}

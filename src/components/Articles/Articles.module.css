@@ -1,0 +1,79 @@
+.container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.wrapper {
+  display: flex;
+  width: 87%;
+  flex-direction: column;
+}
+
+.title {
+  letter-spacing: 2.24px;
+  align-self: start;
+  color: var(--font-title-color);
+  font: var(--font-title);
+}
+
+.articleGrid {
+  margin-top: 85px;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.articleList {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.pagination {
+  align-self: center;
+  display: flex;
+  margin-top: 24px;
+  width: 114px;
+  max-width: 100%;
+  gap: 14px;
+  color: #424961;
+  white-space: nowrap;
+  align-items: center;
+  font: var(--font-primary);
+}
+
+.paginationButton {
+  border-radius: 5px;
+  background-color: rgba(217, 217, 217, 0);
+  display: flex;
+  width: 29px;
+  height: 29px;
+  border: 1px solid #afafaf;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginationButton:hover {
+  border-color: #424961;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .articleList {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .articleGrid {
+    margin-top: 40px;
+  }
+}

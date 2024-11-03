@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  :root{
 
-.App-link {
-  color: #61dafb;
-}
+    --main-color:#e23744;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    --font-caption: 11px "Arial", sans-serif;
+    --font-icon: 19px;
+
+    --font-title: 600 62px/1 "Source Sans Pro", sans-serif;
+    --font-title-color:#0e2368;
+    --font-primary:400 16px "Open Sans", sans-serif;
+    --font-secondary: 400 21px "Open Sans", sans-serif;
+    --font-primary-color:rgba(68, 73, 87, 1);
+    
   }
-  to {
-    transform: rotate(360deg);
+  @media (max-width:991px) {
+    :root{
+      --font-title: 600 55px/1 "Source Sans Pro", sans-serif;
+      --font-primary:400 25px "Open Sans", sans-serif;
+      --font-secondary: 400 40px "Open Sans", sans-serif;
+    }
   }
-}
+  @media (max-width:550px) {
+    :root{
+      --font-title: 600 38px/1 "Source Sans Pro", sans-serif;
+      --font-primary:400 14px "Open Sans", sans-serif;
+      --font-secondary: 400 20px "Open Sans", sans-serif;
+    }
+  }

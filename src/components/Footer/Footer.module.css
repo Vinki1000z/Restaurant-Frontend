@@ -1,0 +1,107 @@
+.footer {
+    background-color: #f8f8f8;
+    padding: 93px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  .footerContent {
+    display: flex;
+    width: 100%;
+    max-width: 1226px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -20px;
+  }
+  
+  .logo {
+    aspect-ratio: 1.29;
+    object-fit: contain;
+    object-position: center;
+    width: 161px;
+    align-self: flex-end;
+    margin-top: 39px;
+    max-width: 100%;
+  }
+  
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #646874;
+    font: 400 15px/2 Source Sans Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+  
+  .sectionTitle {
+    color: #0e2368;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.57px;
+  }
+  
+  .address {
+    line-height: 23px;
+    margin-top: 28px;
+  }
+  
+  .email {
+    margin-top: 25px;
+  }
+  
+  .phone {
+    text-align: center;
+    margin-top: 24px;
+  }
+  
+  .links {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #646874;
+    font: 400 15px/1.8 Source Sans Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+  
+  .link {
+    margin-top: 29px;
+  }
+  
+  .socialLinks {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .copyright {
+    color: #828b9c;
+    text-align: center;
+    margin-top: 147px;
+    font: 400 15px/2 Roboto, sans-serif;
+  }
+
+  .SocialMediaIcon{
+    padding-top:20px;
+  }
+  @media (max-width: 991px) {
+    .footer {
+      padding: 0 20px 100px;
+    }
+  
+    .footerContent {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .socialLinks {
+      margin-right: 10px;
+    }
+  
+    .copyright {
+      margin-top: 40px;
+    }
+  }

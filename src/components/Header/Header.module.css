@@ -1,0 +1,199 @@
+/* Container styles */
+.header {
+  padding-left: 150px;
+  overflow: hidden;
+}
+
+.contentWrapper {
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 42%;
+  margin-left: 0px;
+  padding-right: 37px;
+}
+
+.leftColumnContent {
+  display: flex;
+  margin-top: 33px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.logo {
+  aspect-ratio: 1.29;
+  object-fit: contain;
+  object-position: center;
+  width: 107px;
+  max-width: 100%;
+
+}
+
+.title {
+  margin-top: 111px;
+  font-weight: bold;
+  font: var(--font-title);
+  line-height: 69px;
+  color: var(--font-title-color);
+}
+
+.highlight {
+  color: var(--main-color); /* Red color for "Best" */
+}
+
+.description {
+  color: var(--font-primary-color);
+  font: var(--font-primary);
+  line-height: 27px;
+  margin-top: 26px;
+}
+
+.exploreButton {
+  border-radius: 34px;
+  background-color: var(--main-color);
+  align-self: start;
+  margin-top: 41px;
+  min-height: 63px;
+  gap: 7px;
+  font: var(--font-primary);
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: 0.18px;
+  line-height: 36px;
+  padding: 14px 34px;
+  border: none;
+  cursor: pointer;
+}
+
+.exploreButton:hover {
+  background-color: rgba(226, 55, 68, 0.8);
+}
+
+/* Background Image Styles */
+.backgroundImage {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 51%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  align-items: flex-end;
+  overflow: visible;
+}
+.MobilebackgroundImage{
+  display: none;
+}
+
+/* Get In Touch Button */
+.button {
+  position: absolute;
+  right: 46px;
+  top: 20px;
+  width: 150px;
+  border-radius: 21px;
+  background-color: transparent;
+  color: #fff;
+  letter-spacing: 0.48px;
+  padding: 0 11px;
+  font: var(--font-primary);
+  height: 35px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .header {
+    /* padding-left: 20px; */
+    padding-left: 0px;
+  }
+  .logo{
+    display: none;
+    }
+  
+  .backgroundImage {
+    width: 100%;
+    height: auto;
+    /* margin-top: 20px; */
+  }
+  .contentWrapper {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 0px;
+  }
+  .leftColumnContent{
+    text-align: center;
+
+  }
+  .leftColumn{
+    padding: 0px 30px
+  }
+  .title {
+    margin-top: 40px;
+    /* font-size: 40px; */
+    line-height: 50px;
+    text-align: center;
+    font-weight: 700;
+  }
+  .description{
+    line-height:1.6;
+    font-weight: 400;
+  }
+  .button{
+    right: 9px;
+    top: 15px;
+    width: 200px;
+    height: 42px;
+  }
+  .leftColumn {
+    width: 100%;
+  }
+
+  .leftColumnContent {
+    margin-top: 40px;
+  }
+
+
+  .exploreButton {
+    margin-top: 40px;
+    padding: 0 20px;
+    align-self: center;
+  }
+
+  /* Images */
+  .backgroundImage{
+    display: none;
+  }
+  .MobilebackgroundImage{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width:550px) {
+  .button{
+    width: 115px;
+  }
+}
